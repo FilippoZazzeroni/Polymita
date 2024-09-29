@@ -16,7 +16,7 @@ class AnimatedTextButton extends _AnimatedButton {
   final String text;
 
   AnimatedTextButton(this.text, {super.key})
-      : super(rotation: Tween(begin: 0.0, end: 0.05));
+      : super(scale: Tween(begin: 1.0, end: 1.25));
 
   @override
   Widget child() {
@@ -48,11 +48,13 @@ class _AnimatedButtonState extends State<_AnimatedButton>
   void initState() {
     super.initState();
     _animationController = AnimationController(
-        duration: const Duration(milliseconds: 150), vsync: this);
+        duration: const Duration(milliseconds: 200),
+        reverseDuration: const Duration(milliseconds: 50),
+        vsync: this);
     _rotation = widget.rotation?.animate(
         CurvedAnimation(parent: _animationController, curve: Curves.easeInOut));
-    _scale = widget.scale?.animate(
-        CurvedAnimation(parent: _animationController, curve: Curves.easeInOut));
+    _scale = widget.scale?.animate(CurvedAnimation(
+        parent: _animationController, curve: Curves.easeOutCubic));
   }
 
   @override
