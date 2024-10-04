@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:meme_sites/Components/animated_button.dart';
+import 'package:meme_sites/Core/app_model.dart';
 
 class ButtonsBar extends StatelessWidget {
-  const ButtonsBar({super.key});
+  final List<ButtonBarModel> buttonsModel;
+  const ButtonsBar({super.key, required this.buttonsModel});
 
   @override
   Widget build(BuildContext context) {

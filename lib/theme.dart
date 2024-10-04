@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ThemeBuilder {
-  static ThemeData from(BuildContext context) {
+  static ThemeData from(ThemeData modelTheme, BuildContext context) {
     final screenSize = MediaQuery.sizeOf(context);
     var fontReducer = 1.0;
     if (screenSize.width < 750) {
@@ -17,7 +17,7 @@ class ThemeBuilder {
       // Define default text color and style for various widgets
       textTheme: TextTheme(
         displayLarge: TextStyle(
-          fontFamily: "LuckiestGuy",
+          fontFamily: "AppFont",
           fontSize: 100 * fontReducer,
           fontWeight: FontWeight.bold,
           color: Colors.white,
@@ -48,12 +48,12 @@ class ThemeBuilder {
           ],
         ),
         bodyLarge: const TextStyle(
-          fontFamily: 'LuckiestGuy', // Gamified font for body text
+          fontFamily: 'AppFont', // Gamified font for body text
           color: Colors.white,
           fontSize: 16,
         ),
         labelLarge: TextStyle(
-          fontFamily: 'LuckiestGuy',
+          fontFamily: 'AppFont',
           fontSize: 40 * fontReducer,
           color: Colors.white,
         ),

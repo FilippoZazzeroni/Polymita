@@ -1,0 +1,42 @@
+{
+    "appTitle": "My Awesome App",
+    "appDescription": "This is a sample app description.",
+    "theme": {
+      "mode": "dark",
+      "primaryColor": 4294967295,
+      "accentColor": 4286611584,
+      "textStyles": {
+        "titleStyle": {
+          "fontSize": 100,
+          "fontColor": 4294967295,
+          "shadows": [
+            { "color": 4294901760, "blurRadius": 10 },
+            { "color": 4286611584, "blurRadius": 20 }
+          ]
+        },
+        "bodyStyle": {
+          "fontSize": 16,
+          "fontColor": 4294967295
+        },
+        "buttonStyle": {
+          "fontSize": 40,
+          "fontColor": 4294967295
+        }
+      },
+      "buttonTheme": {
+        "textColor": 4294967295,
+        "backgroundColor": 4286611584
+      }
+    },
+    "navigationButtons": [
+      {
+        "iconPath": "assets/icon1.png",
+        "destinationLink": "https://example.com/page1"
+      },
+      {
+        "iconPath": "assets/icon2.png",
+        "destinationLink": "https://example.com/page2"
+      }
+    ]
+  }
+  

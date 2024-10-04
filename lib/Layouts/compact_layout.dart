@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:meme_sites/Components/animated_button.dart';
+import 'package:meme_sites/Core/app_model.dart';
 
 class _UX {
   static const logoBottomPadding = 40.0;
 }
 
 class CompactLayout extends StatelessWidget {
-  const CompactLayout({super.key});
+  final AppModel model;
+  const CompactLayout({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meme_sites/Components/animated_button.dart';
+import 'package:meme_sites/Core/app_model.dart';
 
 class _UX {
   static const screenWidthLimit = 1920.0;
@@ -7,7 +8,8 @@ class _UX {
 }
 
 class ExtendedLayout extends StatelessWidget {
-  const ExtendedLayout({super.key});
+  final AppModel model;
+  const ExtendedLayout({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {

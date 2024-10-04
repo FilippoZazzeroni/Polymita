@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:meme_sites/Core/app_model.dart';
 import 'package:meme_sites/Layouts/compact_layout.dart';
 import 'package:meme_sites/Layouts/extended_layout.dart';
 import 'package:meme_sites/buttons_bar.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  final AppModel model;
+  const HomePage({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {
@@ -23,13 +25,13 @@ class HomePage extends StatelessWidget {
           ),
           child: ListView(
             children: [
-              const ButtonsBar(),
+              ButtonsBar(buttonsModel: model.navigationButtons),
               LayoutBuilder(builder: (context, constraint) {
                 final List<Widget> chidren = [];
                 if (constraint.maxWidth < 1500) {
-                  chidren.add(const CompactLayout());
+                  chidren.add(CompactLayout(model: model));
                 } else {
-                  chidren.add(const ExtendedLayout());
+                  chidren.add(ExtendedLayout(model: model));
                 }
                 return Column(children: chidren);
               })

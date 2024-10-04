@@ -58,9 +58,9 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   fonts:
-    - family: LuckiestGuy
+    - family: AppFont
       fonts:
         - asset: assets/font.ttf
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/logo.png
+    - assets/
