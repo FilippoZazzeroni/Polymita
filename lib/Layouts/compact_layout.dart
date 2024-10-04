@@ -41,7 +41,10 @@ class CompactLayout extends StatelessWidget {
               ),
             ),
             SizedBox(width: MediaQuery.of(context).size.width / 8),
-            AnimatedTextButton("GET IT")
+            AnimatedTextButton(
+              "GET IT",
+              onPressed: () {},
+            )
           ],
         )
       ],

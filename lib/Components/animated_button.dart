@@ -1,21 +1,42 @@
 import 'package:flutter/material.dart';
 
-class AnimatedIconButton extends _AnimatedButton {
-  final IconData icon;
+class _IconUX {
+  static const size = 24.0;
+  static const padding = 4.0;
+}
 
-  AnimatedIconButton(this.icon, {super.key})
+class AnimatedIconButton extends _AnimatedButton {
+  final Image icon;
+  final bool tinted;
+
+  AnimatedIconButton(this.icon,
+      {required this.tinted, super.key, required super.onPressed})
       : super(scale: Tween(begin: 1.0, end: 1.2));
 
   @override
   Widget child() {
-    return Icon(icon);
+    return Padding(
+      padding:
+          const EdgeInsets.all(_IconUX.padding), // Apply padding from _IconUX
+      child: SizedBox(
+        width: _IconUX.size, // Apply size from _IconUX
+        height: _IconUX.size,
+        child: ColorFiltered(
+          colorFilter: ColorFilter.mode(
+            tinted ? Colors.white : Colors.transparent, // Apply the tint color
+            BlendMode.srcATop, // Blend mode to apply the color to the icon
+          ),
+          child: icon, // Render the icon
+        ),
+      ),
+    );
   }
 }
 
 class AnimatedTextButton extends _AnimatedButton {
   final String text;
 
-  AnimatedTextButton(this.text, {super.key})
+  AnimatedTextButton(this.text, {super.key, required super.onPressed})
       : super(scale: Tween(begin: 1.0, end: 1.25));
 
   @override
@@ -27,7 +48,9 @@ class AnimatedTextButton extends _AnimatedButton {
 class _AnimatedButton extends StatefulWidget {
   final Tween<double>? rotation;
   final Tween<double>? scale;
-  const _AnimatedButton({super.key, this.rotation, this.scale});
+  final Function onPressed;
+  const _AnimatedButton(
+      {super.key, this.rotation, this.scale, required this.onPressed});
 
   @override
   _AnimatedButtonState createState() => _AnimatedButtonState();
@@ -76,7 +99,7 @@ class _AnimatedButtonState extends State<_AnimatedButton>
                 ..scale(_scale?.value ?? 1.0),
               child: ElevatedButton(
                 onPressed: () {
-                  // Button action goes here
+                  widget.onPressed();
                 },
                 style: ElevatedButton.styleFrom(
                   padding:

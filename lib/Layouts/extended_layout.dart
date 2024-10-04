@@ -41,7 +41,10 @@ class ExtendedLayout extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.labelLarge,
                   ),
-                  AnimatedTextButton("GET IT")
+                  AnimatedTextButton(
+                    "GET IT",
+                    onPressed: () {},
+                  )
                 ],
               ),
             )

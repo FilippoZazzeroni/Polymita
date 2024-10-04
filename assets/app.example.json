@@ -1,42 +1,44 @@
 {
-    "appTitle": "My Awesome App",
-    "appDescription": "This is a sample app description.",
-    "theme": {
-      "mode": "dark",
-      "primaryColor": 4294967295,
-      "accentColor": 4286611584,
-      "textStyles": {
-        "titleStyle": {
-          "fontSize": 100,
-          "fontColor": 4294967295,
-          "shadows": [
-            { "color": 4294901760, "blurRadius": 10 },
-            { "color": 4286611584, "blurRadius": 20 }
-          ]
-        },
-        "bodyStyle": {
-          "fontSize": 16,
-          "fontColor": 4294967295
-        },
-        "buttonStyle": {
-          "fontSize": 40,
-          "fontColor": 4294967295
-        }
+  "appTitle": "My Awesome App",
+  "appDescription": "This is a sample app description.",
+  "theme": {
+    "mode": "dark",
+    "primaryColor": "#00CFFF", 
+    "accentColor": "#00BFFF",   
+    "textStyles": {
+      "titleStyle": {
+        "fontSize": 100,
+        "fontColor": "#FFFFFF",  
+        "shadows": [
+          { "color": "#00CFFF", "blurRadius": 10 },
+          { "color": "#00BFFF", "blurRadius": 20 },
+          { "color": "#4C004BA0", "blurRadius": 40 } 
+        ]
       },
-      "buttonTheme": {
-        "textColor": 4294967295,
-        "backgroundColor": 4286611584
+      "bodyStyle": {
+        "fontSize": 16,
+        "fontColor": "#FFFFFF" 
+      },
+      "buttonStyle": {
+        "fontSize": 40,
+        "fontColor": "#FFFFFF" 
       }
     },
-    "navigationButtons": [
-      {
-        "iconPath": "assets/icon1.png",
-        "destinationLink": "https://example.com/page1"
-      },
-      {
-        "iconPath": "assets/icon2.png",
-        "destinationLink": "https://example.com/page2"
-      }
-    ]
-  }
-  
+    "buttonTheme": {
+      "textColor": "#FFFFFF",      
+      "backgroundColor": "#00BFFF"
+    }
+  },
+  "navigationButtons": [
+    {
+      "iconPath": "twitter.png",
+      "destinationLink": "https://www.x.com",
+      "tinted": true
+    },
+    {
+      "iconPath": "utube.png",
+      "destinationLink": "https://www.youtube.com",
+      "tinted": false
+    }
+  ]
+}

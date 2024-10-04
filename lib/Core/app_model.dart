@@ -19,8 +19,8 @@ class AppModel {
 
     return ThemeData(
       brightness: brightness,
-      primaryColor: Color(json["primaryColor"]),
-      hintColor: Color(json["accentColor"]),
+      primaryColor: _ColorConverter.fromHex(json["primaryColor"]),
+      hintColor: _ColorConverter.fromHex(json["accentColor"]),
 
       // Text styles for various elements
       textTheme: TextTheme(
@@ -32,8 +32,10 @@ class AppModel {
       // Button Theme
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          foregroundColor: Color(json["buttonTheme"]["textColor"]),
-          backgroundColor: Color(json["buttonTheme"]["backgroundColor"]),
+          foregroundColor:
+              _ColorConverter.fromHex(json["buttonTheme"]["textColor"]),
+          backgroundColor:
+              _ColorConverter.fromHex(json["buttonTheme"]["backgroundColor"]),
         ),
       ),
     );
@@ -43,11 +45,11 @@ class AppModel {
     return TextStyle(
       fontFamily: "AppFont",
       fontSize: json["fontSize"]?.toDouble(),
-      color: Color(json["fontColor"]),
+      color: _ColorConverter.fromHex(json["fontColor"]),
       shadows: json["shadows"] != null
           ? (json["shadows"] as List<dynamic>).map((shadowJson) {
               return Shadow(
-                color: Color(shadowJson["color"]),
+                color: _ColorConverter.fromHex(shadowJson["color"]),
                 blurRadius: shadowJson["blurRadius"].toDouble(),
               );
             }).toList()
@@ -65,8 +67,20 @@ class AppModel {
 class ButtonBarModel {
   final String iconAsset;
   final String link;
+  final bool tinted;
 
   ButtonBarModel(Map<String, dynamic> json)
       : iconAsset = json["iconPath"],
-        link = json["destinationLink"];
+        link = json["destinationLink"],
+        tinted = json["tinted"];
+}
+
+class _ColorConverter {
+  // Convert hex color string (e.g., "#FFFFFF" or "#FFFFFFFF") to Color object
+  static Color fromHex(String hexString) {
+    final buffer = StringBuffer();
+    if (hexString.length == 6 || hexString.length == 7) buffer.write('ff');
+    buffer.write(hexString.replaceFirst('#', ''));
+    return Color(int.parse(buffer.toString(), radix: 16));
+  }
 }
