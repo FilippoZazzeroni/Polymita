@@ -1,5 +1,5 @@
-name: meme_sites
-description: "A new Flutter project."
+name: polymita
+description: "Polymita landing page"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -61,7 +61,8 @@ flutter:
   fonts:
     - family: AppFont
       fonts:
-        - asset: assets/font.ttf
+        - asset: assets/Garet-Book.ttf
+        - asset: assets/Garet-Heavy.ttf
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/

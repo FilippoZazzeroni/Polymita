@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meme_sites/Components/animated_button.dart';
-import 'package:meme_sites/Core/app_model.dart';
+import 'package:polymita/Components/animated_button.dart';
+import 'package:polymita/Core/app_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ButtonsBar extends StatelessWidget {

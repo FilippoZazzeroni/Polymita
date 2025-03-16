@@ -1,44 +1,42 @@
 {
-  "appTitle": "My Awesome App",
-  "appDescription": "This is a sample app description.",
+  "appTitle": "Polymita - the inclusion point",
+  "appDescription": "Il primo inlcusion point digitale su Instagram.\n Pubblichiamo ogni settimana tre post su un tema scelto in base alle giornate internazionali del calendario UN.\n Promuoviamo un cambiamento sociale positivo attraverso la conoscienza.",
+  "callToAction": "CONTATTACI",
   "theme": {
     "mode": "dark",
-    "primaryColor": "#00CFFF", 
+    "primaryColor": "#8408AE",
+    "backgroundColor": "#F7F7F7",
     "accentColor": "#00BFFF",   
     "textStyles": {
       "titleStyle": {
-        "fontSize": 100,
-        "fontColor": "#FFFFFF",  
-        "shadows": [
-          { "color": "#00CFFF", "blurRadius": 10 },
-          { "color": "#00BFFF", "blurRadius": 20 },
-          { "color": "#4C004BA0", "blurRadius": 40 } 
-        ]
+        "fontSize": 60,
+        "fontColor": "#040603",
+        "fontWeight": "bold"
       },
       "bodyStyle": {
-        "fontSize": 16,
-        "fontColor": "#FFFFFF" 
+        "fontSize": 40,
+        "fontColor": "#040603"
       },
       "buttonStyle": {
         "fontSize": 40,
-        "fontColor": "#FFFFFF" 
+        "fontColor": "#040603" 
       }
     },
     "buttonTheme": {
-      "textColor": "#FFFFFF",      
-      "backgroundColor": "#00BFFF"
+      "textColor": "#F7F7F7",      
+      "backgroundColor": "#8408AE"
     }
   },
   "navigationButtons": [
     {
-      "iconPath": "twitter.png",
-      "destinationLink": "https://www.x.com",
+      "iconPath": "instagram.png",
+      "destinationLink": "https://www.instagram.com/polymita.it?igsh=d3JhcG9yODM1Z3Az&utm_source=qr",
       "tinted": true
     },
     {
-      "iconPath": "utube.png",
-      "destinationLink": "https://www.youtube.com",
-      "tinted": false
+      "iconPath": "mail.png",
+      "destinationLink": "https://www.instagram.com",
+      "tinted": true
     }
   ]
 }

@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 class AppModel {
   final ThemeData theme;
   final String title;
-  final String? description;
+  final String description;
+  final String calltoAction;
   final List<ButtonBarModel> navigationButtons;
 
   AppModel(Map<String, dynamic> json)
       : title = json["appTitle"],
         description = json["appDescription"],
+        calltoAction = json["callToAction"],
         theme = _initTheme(json["theme"]),
         navigationButtons = _initButtonBarModels(json["navigationButtons"]);
 
@@ -19,6 +21,7 @@ class AppModel {
 
     return ThemeData(
       brightness: brightness,
+      scaffoldBackgroundColor: _ColorConverter.fromHex(json["backgroundColor"]),
       primaryColor: _ColorConverter.fromHex(json["primaryColor"]),
       hintColor: _ColorConverter.fromHex(json["accentColor"]),
 
@@ -42,8 +45,14 @@ class AppModel {
   }
 
   static TextStyle _initTextStyle(Map<String, dynamic> json) {
+    FontWeight weight = FontWeight.normal;
+    if (json["fontWeight"] == "bold") {
+      weight = FontWeight.bold;
+    }
+
     return TextStyle(
       fontFamily: "AppFont",
+      fontWeight: weight,
       fontSize: json["fontSize"]?.toDouble(),
       color: _ColorConverter.fromHex(json["fontColor"]),
       shadows: json["shadows"] != null

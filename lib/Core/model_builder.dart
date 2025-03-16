@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
-import 'package:meme_sites/Core/app_model.dart';
+import 'package:polymita/Core/app_model.dart';
 
 class ModelBuilder {
   static Future<AppModel> load() async {

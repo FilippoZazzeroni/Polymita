@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:meme_sites/Core/app_model.dart';
-import 'package:meme_sites/Core/model_builder.dart';
-import 'package:meme_sites/home_page.dart';
-import 'package:meme_sites/theme.dart';
+import 'package:polymita/Core/app_model.dart';
+import 'package:polymita/Core/model_builder.dart';
+import 'package:polymita/home_page.dart';
+import 'package:polymita/theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: model.title,
       theme: ThemeBuilder.from(model.theme, context),
       home: HomePage(
         model: model,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meme_sites/Components/animated_button.dart';
-import 'package:meme_sites/Core/app_model.dart';
+import 'package:polymita/Components/animated_button.dart';
+import 'package:polymita/Core/app_model.dart';
 
 class _UX {
   static const logoBottomPadding = 40.0;
@@ -18,7 +18,7 @@ class CompactLayout extends StatelessWidget {
         RichText(
           textAlign: TextAlign.center,
           text: TextSpan(
-              text: "Shibalorian the return",
+              text: model.title,
               style: Theme.of(context).textTheme.displayLarge),
         ),
         Padding(
@@ -34,7 +34,7 @@ class CompactLayout extends StatelessWidget {
               width: MediaQuery.of(context).size.width / 2,
               child: Flexible(
                 child: Text(
-                  "Find out the power of the shibalorian, the force might resides in you",
+                  model.description,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.labelLarge,
                 ),
@@ -42,7 +42,7 @@ class CompactLayout extends StatelessWidget {
             ),
             SizedBox(width: MediaQuery.of(context).size.width / 8),
             AnimatedTextButton(
-              "GET IT",
+              model.calltoAction,
               onPressed: () {},
             )
           ],
