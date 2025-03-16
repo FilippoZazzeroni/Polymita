@@ -32,11 +32,6 @@
       "iconPath": "instagram.png",
       "destinationLink": "https://www.instagram.com/polymita.it?igsh=d3JhcG9yODM1Z3Az&utm_source=qr",
       "tinted": true
-    },
-    {
-      "iconPath": "mail.png",
-      "destinationLink": "https://www.instagram.com",
-      "tinted": true
     }
   ]
 }

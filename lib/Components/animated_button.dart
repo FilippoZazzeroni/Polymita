@@ -41,7 +41,10 @@ class AnimatedTextButton extends _AnimatedButton {
 
   @override
   Widget child() {
-    return Text(text);
+    return Text(
+      text,
+      style: TextStyle(fontSize: 30),
+    );
   }
 }
 

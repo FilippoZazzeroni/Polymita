@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:polymita/Components/animated_button.dart';
 import 'package:polymita/Core/app_model.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class _UX {
   static const screenWidthLimit = 1280.0;
@@ -25,76 +26,83 @@ class ExtendedLayout extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.all(_UX.logoPadding),
-            child: SizedBox(
-                width: _UX.logoWidth, child: Image.asset("logo-text.png")),
+            child: Text(
+              "Work in progress ...",
+              style: model.theme.textTheme.displayLarge,
+            ),
           ),
-          Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Flexible(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    model.description,
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.labelLarge,
-                  ),
-                  Padding(
-                      padding: const EdgeInsets.all(_UX.callToActionPadding),
-                      child: AnimatedTextButton(
-                        model.calltoAction,
-                        onPressed: () {},
-                      ))
-                ],
-              ),
-            )
-          ]),
-          Row(
-            children: [
-              Container(
-                color: model.theme.scaffoldBackgroundColor,
-                width: _UX.screenWidthLimit / 2.0,
-                height: _UX.cardHeight,
-                child: Padding(
-                  padding: const EdgeInsets.all(_UX.logoPadding),
-                  child: SizedBox(
-                      width: _UX.logoWidth, child: Image.asset("icon1.png")),
-                ),
-              ),
-              Flexible(
-                  child: Container(
-                height: _UX.cardHeight,
-                color: model.theme.primaryColor,
-                child: Text(
-                  "Semplifichiamo fonti autorevoli per renderle accessibili. Facciamo ordine in un mare di informazioni per diffondere cultura.",
-                  style: model.theme.textTheme.bodyLarge,
-                  textAlign: TextAlign.left,
-                ),
-              ))
-            ],
-          ),
-          Row(
-            children: [
-              Flexible(
-                  child: Container(
-                height: _UX.cardHeight,
-                color: model.theme.primaryColor,
-                child: Text(
-                  "Semplifichiamo fonti autorevoli per renderle accessibili. Facciamo ordine in un mare di informazioni per diffondere cultura.",
-                  style: model.theme.textTheme.bodyLarge,
-                  textAlign: TextAlign.left,
-                ),
+          Padding(
+              padding: const EdgeInsets.all(_UX.callToActionPadding),
+              child: AnimatedTextButton(
+                "CI TROVI QUI >",
+                onPressed: () {
+                  launchUrl(Uri.tryParse(
+                          "https://www.instagram.com/polymita.it?igsh=d3JhcG9yODM1Z3Az&utm_source=qr") ??
+                      Uri());
+                },
               )),
-              Container(
-                color: model.theme.scaffoldBackgroundColor,
-                height: _UX.cardHeight,
-                width: _UX.cardWidth,
-                child: Image.asset(
-                  "picta.jpg",
-                  fit: BoxFit.fill,
-                ),
-              ),
-            ],
-          ),
+
+          // Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+          //   Flexible(
+          //     child: Column(
+          //       mainAxisAlignment: MainAxisAlignment.center,
+          //       children: [
+          //         Text(
+          //           model.description,
+          //           textAlign: TextAlign.center,
+          //           style: Theme.of(context).textTheme.labelLarge,
+          //         ),
+          //       ],
+          //     ),
+          //   )
+          // ]),
+          // Row(
+          //   children: [
+          //     Container(
+          //       color: model.theme.scaffoldBackgroundColor,
+          //       width: _UX.screenWidthLimit / 2.0,
+          //       height: _UX.cardHeight,
+          //       child: Padding(
+          //         padding: const EdgeInsets.all(_UX.logoPadding),
+          //         child: SizedBox(
+          //             width: _UX.logoWidth, child: Image.asset("icon1.png")),
+          //       ),
+          //     ),
+          //     Flexible(
+          //         child: Container(
+          //       height: _UX.cardHeight,
+          //       color: model.theme.primaryColor,
+          //       child: Text(
+          //         "Semplifichiamo fonti autorevoli per renderle accessibili. Facciamo ordine in un mare di informazioni per diffondere cultura.",
+          //         style: model.theme.textTheme.bodyLarge,
+          //         textAlign: TextAlign.left,
+          //       ),
+          //     ))
+          //   ],
+          // ),
+          // Row(
+          //   children: [
+          //     Flexible(
+          //         child: Container(
+          //       height: _UX.cardHeight,
+          //       color: model.theme.primaryColor,
+          //       child: Text(
+          //         "Semplifichiamo fonti autorevoli per renderle accessibili. Facciamo ordine in un mare di informazioni per diffondere cultura.",
+          //         style: model.theme.textTheme.bodyLarge,
+          //         textAlign: TextAlign.left,
+          //       ),
+          //     )),
+          //     Container(
+          //       color: model.theme.scaffoldBackgroundColor,
+          //       height: _UX.cardHeight,
+          //       width: _UX.cardWidth,
+          //       child: Image.asset(
+          //         "picta.jpg",
+          //         fit: BoxFit.fill,
+          //       ),
+          //     ),
+          //   ],
+          // ),
         ],
       ),
     );

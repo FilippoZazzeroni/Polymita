@@ -12,14 +12,17 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: model.theme.scaffoldBackgroundColor,
-      body: ListView(
+      body: Column(
         children: [
           ButtonsBar(buttonsModel: model.navigationButtons),
+          Expanded(child: SizedBox()),
           LayoutBuilder(builder: (context, constraint) {
             final List<Widget> chidren = [];
             chidren.add(ExtendedLayout(model: model));
-            return Column(children: chidren);
-          })
+            return Column(
+                mainAxisAlignment: MainAxisAlignment.center, children: chidren);
+          }),
+          Expanded(child: SizedBox()),
         ],
       ),
     );
