@@ -24,13 +24,7 @@ class ExtendedLayout extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.all(_UX.logoPadding),
-            child: Text(
-              "Work in progress ...",
-              style: model.theme.textTheme.displayLarge,
-            ),
-          ),
+          SizedBox(width: _UX.logoWidth, child: Image.asset("logo.png")),
           Padding(
               padding: const EdgeInsets.all(_UX.callToActionPadding),
               child: AnimatedTextButton(
