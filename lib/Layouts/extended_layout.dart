@@ -24,7 +24,7 @@ class ExtendedLayout extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          SizedBox(width: _UX.logoWidth, child: Image.asset("logo.png")),
+          SizedBox(width: _UX.logoWidth, child: Image.asset("assets/logo.png")),
           Padding(
               padding: const EdgeInsets.all(_UX.callToActionPadding),
               child: AnimatedTextButton(
