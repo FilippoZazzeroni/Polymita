@@ -50556,7 +50556,7 @@ A.hV.prototype={}
 A.xh.prototype={
 T(a){var s=null
 A.di(a,B.tD,t.w).toString
-return A.Ae(A.a0T(A.a([A.Ae(A.a51("logo.png"),s,320),new A.k9(B.wH,new A.vC("CI TROVI QUI >",new A.av(1,1.25,t.a7),new A.L4(),s),s)],t.d),B.aX),s,1280)}}
+return A.Ae(A.a0T(A.a([A.Ae(A.a51("assets/logo.png"),s,320),new A.k9(B.wH,new A.vC("CI TROVI QUI >",new A.av(1,1.25,t.a7),new A.L4(),s),s)],t.d),B.aX),s,1280)}}
 A.L4.prototype={
 $0(){var s=null,r=A.a2k("https://www.instagram.com/polymita.it?igsh=d3JhcG9yODM1Z3Az&utm_source=qr")
 A.a0b(r==null?A.uz(s,s,s):r,s)},
