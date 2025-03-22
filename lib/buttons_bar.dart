@@ -12,21 +12,21 @@ class ButtonsBar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Row(
-          children: buttonsModel
-              .map((value) => Row(
-                    children: [
-                      AnimatedIconButton(
-                          Image.asset("assets/${value.iconAsset}"),
-                          tinted: value.tinted, onPressed: () async {
-                        launchUrl(Uri.tryParse(value.link) ?? Uri(),
-                            webOnlyWindowName: "_blank");
-                      }),
-                      const SizedBox(
-                        width: 20.0,
-                      )
-                    ],
-                  ))
-              .toList()),
+        children: buttonsModel
+            .map((value) => Row(
+                  children: [
+                    AnimatedIconButton(Image.asset("assets/${value.iconAsset}"),
+                        tinted: value.tinted, onPressed: () async {
+                      launchUrl(Uri.tryParse(value.link) ?? Uri(),
+                          webOnlyWindowName: "_blank");
+                    }),
+                    const SizedBox(
+                      width: 20.0,
+                    )
+                  ],
+                ))
+            .toList(),
+      ),
     );
   }
 }

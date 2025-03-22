@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:polymita/Core/app_model.dart';
-import 'package:polymita/Layouts/compact_layout.dart';
 import 'package:polymita/Layouts/extended_layout.dart';
 import 'package:polymita/buttons_bar.dart';
 
@@ -13,6 +12,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: model.theme.scaffoldBackgroundColor,
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ButtonsBar(buttonsModel: model.navigationButtons),
           Expanded(child: SizedBox()),

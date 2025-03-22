@@ -24,18 +24,15 @@ class ExtendedLayout extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          SizedBox(width: _UX.logoWidth, child: Image.asset("assets/logo.png")),
-          Padding(
-              padding: const EdgeInsets.all(_UX.callToActionPadding),
-              child: AnimatedTextButton(
-                "CI TROVI QUI >",
-                onPressed: () {
-                  launchUrl(Uri.tryParse(
-                          "https://www.instagram.com/polymita.it?igsh=d3JhcG9yODM1Z3Az&utm_source=qr") ??
-                      Uri());
-                },
-              )),
-
+          SizedBox(
+              width: _UX.logoWidth, child: Image.asset("assets/logo-text.png")),
+          SizedBox(
+            height: 20.0,
+          ),
+          AnimatedTextButton("CI TROVI QUI ->", onPressed: () {
+            launchUrl(Uri.parse(
+                "https://www.instagram.com/polymita.it?igsh=d3JhcG9yODM1Z3Az&utm_source=qr"));
+          })
           // Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           //   Flexible(
           //     child: Column(
