@@ -95,8 +95,7 @@ class ExtendedLayout extends StatelessWidget {
           Con Polymita vogliamo portare un cambiamento sociale positivo nel nostro paese. Se anche tu credi nella possibilità di una società più equa per tutt3 e ti va di aiutarci 👇​      
           """, style: style),
           AnimatedTextButton("SOSTIENI IL PROGETTO ➤", onPressed: () {
-            launchUrl(Uri.parse(
-                "https://www.instagram.com/polymita.it?igsh=d3JhcG9yODM1Z3Az&utm_source=qr"));
+            launchUrl(Uri.parse("https://ko-fi.com/polymita"));
           }),
           const SizedBox(height: 30.0),
         ],
