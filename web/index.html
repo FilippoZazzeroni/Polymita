@@ -18,52 +18,134 @@
   <title>Polymita.it</title>
   <link rel="manifest" href="manifest.json">
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Arial', sans-serif;
+    @font-face {
+      font-family: "AppFont";
+      src: url("assets/Garet-Book.ttf");
+    }
+    @font-face {
+      font-family: "AppFont";
+      src: url("assets/Garet-Heavy.ttf") format("truetype");
+      font-weight: 600;
     }
 
-    .splash-container {
+    .website-content-wrapper {
+      max-width: 1280px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .website-content {
+      text-align: center;
+      font-family: "AppFont";
+    }
+
+    .website-content h1 {
+      margin: 0;
+      color: rgb(132, 8, 174);
+    }
+
+    .img-wrapper {
       text-align: center;
     }
 
-    .pulse-image {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      animation: pulse 2s infinite;
-      box-shadow: 0 0 0 rgba(255, 255, 255, 0.7);
+    .top-bar {
+      display: flex;
+      align-items: center;
+      margin: 10px 10px;
     }
 
-    .splash-text {
+    .logo {
+      margin-right: 20px;
+      width: 30px;
+      height: 30px;
+    }
+
+    .picta-logo {
+      width: 40%;
+      max-width: 400px;
+    }
+
+    .img-wrapper button {
+      margin: 0 auto;
       margin-top: 20px;
-      color: white;
-      font-size: 1.5rem;
-      letter-spacing: 1px;
     }
 
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      70% {
-        transform: scale(1.1);
-      }
-      100% {
-        transform: scale(1);
-      }
+    .animated-button {
+      font-family: "AppFont";
+      font-size: large;
+      background-color: rgb(132, 8, 174);
+      color: white;
+      padding: 12px;
+      transition: transform 0.2s ease-in-out;
+      border-radius: 16px;
+      border: none;
+      display: flex;
+      justify-content: center; 
+      align-items: center;    
+      cursor: pointer;
+    }
+
+    .animated-button img {
+      filter: invert(1);
+      width: 30px;
+      height: 30px;
+    }
+    .animated-button:hover {
+      transform: scale(1.2);
+    }
+
+    .divider {
+      height: 2px;
+      background-color: black;
+      max-width: 1280px;
+      width: 100%;
+      margin: 20px 0px;
     }
   </style>
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+  <!--
   <div class="splash-container">
     <img src="logo-text.png" alt="Logo" class="pulse-image"/>
+  </div>
+  -->
+  <div class="top-bar">
+    <img src="assets/logo.png" class="logo">
+
+    <button class="animated-button">
+      <img src="assets/instagram.png">
+    </button>
+  </div>
+  <div class="website-content-wrapper">
+    <div class="website-content">
+      Polymita.it è il primo inclusion point digitale su Instagram.
+      Un Inclusion Point è un <strong>punto di raccolta informazioni su tematiche che riguardano la nostra società</strong> e ha come obiettivo quello di <strong>contrastare la discriminazione con l’informazione.</strong><br><br>
+      Il nostro team, composto da 5 collaboratrici, <strong>semplifica fonti autorevoli adattandole al nuovo stile comunicativo della nostra epoca.</strong><br><br>
+      Pubblichiamo ogni settimana <strong>3 post su un tema scelto in base alle giornate internazionali del <a href="https://unric.org/it/calendario-giornate-internazionali/">calendario delle Nazioni Unite</a></strong>: una definizione, un approfondimento e un consiglio per saperne di più. Solo grazie alla cultura e allo sviluppo di un pensiero critico è possibile essere cittadini consapevoli e attivi, ecco perché con il nostro metodo, proponiamo un vero e proprio percorso di conoscenza delle tematiche.<br><br>
+      <strong>Polymita é il nome della lumaca più preziosa del mondo!</strong> Conosciuta anche come
+      "lumaca cubana dipinta", la Polymita Picta è nota per il suo guscio arcobaleno. ​​🐌​🌈​​<br>
+      <div class="img-wrapper">
+      <img src="assets/picta-logo.jpeg" class="picta-logo"/>
+      </div>
+      <strong>Come la lumaca prosegue lenta ma decisa verso il suo obiettivo lasciando una scia, anche la più piccola azione può fare la differenza e lasciare il segno.</strong><br><br>
+      Vogliamo garantirti <strong>un punto di vista neutro</strong>, ecco perché tutti i nostri contenuti fanno riferimento a fonti autorevoli regolarmente citate,
+      i cui link sono disponibili nel nostro 
+      <strong>
+          <a href="https://docs.google.com/spreadsheets/d/1e5yp9dR_NFugXrg2LWB6xgDpDpho7gUdYAaf6EQbPC0/edit?usp=sharing">archivio online condiviso</a>
+      </strong><br><br>
+      Per una preview del primo inclusion point digitale su Instagram👇​
+      <div class="img-wrapper">
+        <button class="animated-button">
+          CI TROVI QUI ➤
+        </button>
+      </div>
+      <div class="divider"></div>
+      <h1>#facciamorete</h1>
+      Con Polymita vogliamo portare un cambiamento sociale positivo nel nostro paese. Se anche tu credi nella possibilità di una società più equa per tutt3 e ti va di aiutarci 👇​    
+      <div class="img-wrapper">
+        <button class="animated-button">SOSTIENI IL PROGETTO ➤</button>
+      </div>
+    </div>
   </div>
 </body>
 </html>
