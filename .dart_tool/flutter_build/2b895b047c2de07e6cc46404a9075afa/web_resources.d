@@ -1,0 +1,1 @@
+ build/web/favicon.png build/web/manifest.json build/web/logo-text.png:  /Users/fzazzeroni/Documents/Polymita/polymita/web/index.html /Users/fzazzeroni/Documents/Polymita/polymita/web/favicon.png /Users/fzazzeroni/Documents/Polymita/polymita/web/manifest.json /Users/fzazzeroni/Documents/Polymita/polymita/web/logo-text.png
