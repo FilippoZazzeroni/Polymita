@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <base href="/">
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="Polymita.it - the first inclusion point">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
   <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Polymita.it">
   <link rel="apple-touch-icon" href="favicon.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
+  <link rel="icon" type="image/png" href="favicon.png" />
   <title>Polymita.it</title>
   <link rel="stylesheet" href="style.css">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QBTWSSDFQ"></script>
+  <link rel="stylesheet" href="carousel.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XTZB9Q169H"></script>
   <script src="index.js"></script>
+  <script src="carousel.js"></script>
   <link rel="manifest" href="manifest.json">
 </head>
+
 <body>
   <!--
   <div class="splash-container">
@@ -28,54 +33,131 @@
   </div>
   -->
   <div class="top-bar">
-    <img src="./assets/logo-white.png" class="logo">
-    Polymita.it
-    <a href="https://www.instagram.com/polymita.it?igsh=d3JhcG9yODM1Z3Az&utm_source=qr">
-      <img src="./assets/instagram.png">
-    </a>
+    <div class="top-bar-mobile">
+      <img src="./assets/logo-white.png" class="logo">
+      Polymita.it
+      <button class="top-bar-icon-button" id="menu-button">
+        <img src="assets/menu.png">
+      </button>
+
+      <nav class="menu" id="main-menu">
+        <ul>
+          <li><button onclick="scrollToSectionCloseMenu('home-section')" class="top-bar-text-button">Home</a></li>
+          <li><button onclick="scrollToSectionCloseMenu('whoweare-section')" class="top-bar-text-button">Chi siamo</a></li>
+          <li><button onclick="scrollToSectionCloseMenu('projects-section')" class="top-bar-text-button">Temi</a></li>
+          <li><button onclick="scrollToSectionCloseMenu('contact-section')" class="top-bar-text-button">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="top-bar-web">
+      <img src="./assets/logo-white.png" class="logo">
+      Polymita.it
+      <button class="top-bar-text-button" onclick="scrollToSection('home-section')" id="home-button">
+        Home
+      </button>
+      <button class="top-bar-text-button" onclick="scrollToSection('whoweare-section')">
+        Chi Siamo
+      </button>
+      <button class="top-bar-text-button" onclick="scrollToSection('projects-section')">
+        Progetti
+      </button>
+      <button class="top-bar-text-button" onclick="scrollToSection('contact-section')">
+        Contatti
+      </button>
+      <button onclick="buttonClicked('https://www.instagram.com/polymita.it?igsh=d3JhcG9yODM1Z3Az&utm_source=qr')"
+        class="top-bar-icon-button" id="instagram-button">
+        <img src="./assets/instagram.png">
+      </button>
+      <button onclick="buttonClicked('https://ko-fi.com/polymita')" class="top-bar-icon-button">
+        <img src="./assets/heart.png">
+      </button>
+    </div>
   </div>
   <div class="website-content-wrapper">
     <div class="website-content">
-      Polymita.it è il primo inclusion point digitale su Instagram.
-      Un Inclusion Point è un <strong>punto di raccolta informazioni su tematiche che riguardano la nostra società</strong> e ha come obiettivo quello di <strong>contrastare la discriminazione con l’informazione.</strong><br><br>
-      Il nostro team, composto da 5 collaboratrici, <strong>semplifica fonti autorevoli adattandole al nuovo stile comunicativo della nostra epoca.</strong><br><br>
-      Pubblichiamo ogni settimana <strong>3 post su un tema scelto in base alle giornate internazionali del <a href="https://unric.org/it/calendario-giornate-internazionali/">calendario delle Nazioni Unite</a></strong>: una definizione, un approfondimento e un consiglio per saperne di più. Solo grazie alla cultura e allo sviluppo di un pensiero critico è possibile essere cittadini consapevoli e attivi, ecco perché con il nostro metodo, proponiamo un vero e proprio percorso di conoscenza delle tematiche.<br><br>
-      <strong>Polymita é il nome della lumaca più preziosa del mondo!</strong> Conosciuta anche come
-      "lumaca cubana dipinta", la Polymita Picta è nota per il suo guscio arcobaleno. ​​🐌​🌈​​<br>
-      <div class="img-wrapper">
-      <img src="./assets/picta.png" class="picta-logo"/>
-      </div>
-      <strong>Come la lumaca prosegue lenta ma decisa verso il suo obiettivo lasciando una scia, anche la più piccola azione può fare la differenza e lasciare il segno.</strong><br><br>
-      Vogliamo garantirti <strong>un punto di vista neutro</strong>, ecco perché tutti i nostri contenuti fanno riferimento a fonti autorevoli regolarmente citate,
-      i cui link sono disponibili nel nostro 
-      <strong>
-          <a href="https://docs.google.com/spreadsheets/d/1e5yp9dR_NFugXrg2LWB6xgDpDpho7gUdYAaf6EQbPC0/edit?usp=sharing">archivio online condiviso</a>
-      </strong><br><br>
-      Per una preview del primo inclusion point digitale su Instagram👇​
-      <div class="img-wrapper">
-        <a href="https://www.instagram.com/polymita.it?igsh=d3JhcG9yODM1Z3Az&utm_source=qr" class="animated-button">
-          CI TROVI QUI ➤
-        </a>
-      </div>
-      <div class="divider"></div>
-      <h1>#facciamorete</h1>
-      Con Polymita vogliamo portare un cambiamento sociale positivo nel nostro paese. Se anche tu credi nella possibilità di una società più equa per tutt3 e ti va di aiutarci 👇​    
-      <div class="img-wrapper">
-        <a href="https://ko-fi.com/polymita" class="animated-button">SOSTIENI IL PROGETTO ➤</a>
-      </div>
-      <div class="divider"></div>
+      <section id="home-section">
+        Polymita.it è il primo inclusion point digitale su Instagram.
+        Un Inclusion Point è un <strong>punto di raccolta informazioni su tematiche che riguardano la nostra
+          società</strong> e ha come obiettivo quello di <strong>contrastare la discriminazione con
+          l’informazione.</strong><br><br>
+        Il nostro team, composto da 5 collaboratrici, <strong>semplifica fonti autorevoli adattandole al nuovo stile
+          comunicativo della nostra epoca.</strong><br><br>
+        Pubblichiamo ogni settimana <strong>3 post su un tema scelto in base alle giornate internazionali del <a
+            href="https://unric.org/it/calendario-giornate-internazionali/">calendario delle Nazioni Unite</a></strong>:
+        una definizione, un approfondimento e un consiglio per saperne di più. Solo grazie alla cultura e allo sviluppo
+        di un pensiero critico è possibile essere cittadini consapevoli e attivi, ecco perché con il nostro metodo,
+        proponiamo un vero e proprio percorso di conoscenza delle tematiche.<br><br>
+        <strong>Polymita é il nome della lumaca più preziosa del mondo!</strong> Conosciuta anche come
+        "lumaca cubana dipinta", la Polymita Picta è nota per il suo guscio arcobaleno. ​​🐌​🌈​​<br>
+        <div class="img-wrapper">
+          <img src="./assets/picta.png" class="picta-logo" />
+        </div>
+        <strong>Come la lumaca prosegue lenta ma decisa verso il suo obiettivo lasciando una scia, anche la più piccola
+          azione può fare la differenza e lasciare il segno.</strong><br><br>
+        Vogliamo garantirti <strong>un punto di vista neutro</strong>, ecco perché tutti i nostri contenuti fanno
+        riferimento a fonti autorevoli regolarmente citate,
+        i cui link sono disponibili nel nostro
+        <strong>
+          <a
+            href="https://docs.google.com/spreadsheets/d/1e5yp9dR_NFugXrg2LWB6xgDpDpho7gUdYAaf6EQbPC0/edit?usp=sharing">archivio
+            online condiviso</a>
+        </strong><br><br>
+        Per una preview del primo inclusion point digitale su Instagram👇​
+        <div class="img-wrapper">
+          <a href="https://www.instagram.com/polymita.it?igsh=d3JhcG9yODM1Z3Az&utm_source=qr" class="animated-button">
+            CI TROVI QUI ➤
+          </a>
+        </div>
+
+
+
+      </section>
+
       <section>
+        <h1>#facciamorete</h1>
+        Con Polymita vogliamo portare un cambiamento sociale positivo nel nostro paese. Se anche tu credi nella
+        possibilità di una società più equa per tutt3 e ti va di aiutarci 👇​
+        <div class="img-wrapper">
+          <a href="https://ko-fi.com/polymita" class="animated-button">SOSTIENI IL PROGETTO ➤</a>
+        </div>
+      </section>
+
+      <section id="projects-section">
+        <h1>Progetti</h1>
+        <div class="carousel">
+          <div class="carousel-track">
+            <div class="slide" id="school-section"></div>
+            <div class="slide" id="polylandia-section"></div>
+          </div>
+          <button class="carousel-button prev"><</button>
+          <button class="carousel-button next">></button>
+          <div class="carousel-dots"></div>
+        </div>
+
+        <div class="slide-detail-overlay" id="slide-detail">
+          <div class="slide-detail-content">
+            <button id="close-detail">&times;</button>
+            <div id="detail-body">
+              <!-- Dynamic content goes here -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact-section">
         <h2 style="font-size: 28px; margin-bottom: 20px;">Contatti</h2>
         <p style="font-size: 18px; margin-bottom: 10px;">
           Per maggiori informazioni o per rimanere in contatto, scrivici a:
         </p>
         <p>
-          <a href="mailto:inclusionpoint.it@gmail.com" style="color: #040603; font-weight: bold; text-decoration: underline;">
+          <strong><a href="mailto:inclusionpoint.it@gmail.com">
             inclusionpoint.it@gmail.com
           </a>
+        </strong>
         </p>
       </section>
     </div>
   </div>
 </body>
+
 </html>
