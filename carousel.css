@@ -21,7 +21,8 @@
     flex-shrink: 0;
     display: flex;
     text-align: center;
-    background: #e4d1ff;
+    background: #f6efee;
+    border: black 1px solid;
     padding: 0px 0;
     box-sizing: border-box;
 }
