@@ -34,23 +34,28 @@
   <div class="top-bar">
     <div class="top-bar-mobile">
       <img src="public/images/logo-white.png" class="logo">
-      Polymita.it
+      <div class="brand-container">
+        <span class="brand-name">Polymita.it</span>
+        <span class="brand-payoff">The inclusion point</span>
+      </div>
       <button class="top-bar-icon-button" id="menu-button">
         <img src="public/images/menu.png">
       </button>
 
       <nav class="menu" id="main-menu">
         <ul>
-          <li><button onclick="scrollToSectionCloseMenu('home-section')" class="top-bar-text-button">Home</a></li>
-          <li><button onclick="scrollToSectionCloseMenu('whoweare-section')" class="top-bar-text-button">Chi siamo</a></li>
-          <li><button onclick="scrollToSectionCloseMenu('projects-section')" class="top-bar-text-button">Temi</a></li>
-          <li><button onclick="scrollToSectionCloseMenu('contact-section')" class="top-bar-text-button">Contatti</a></li>
+          <li><button onclick="scrollToSectionCloseMenu('home-section')" class="top-bar-text-button">Home</button></li>
+          <li><button onclick="scrollToSectionCloseMenu('whoweare-section')" class="top-bar-text-button">Chi siamo</button></li>
+          <li><button onclick="scrollToSectionCloseMenu('projects-section')" class="top-bar-text-button">Temi</button></li>
         </ul>
       </nav>
     </div>
     <div class="top-bar-web">
       <img src="public/images/logo-white.png" class="logo">
-      Polymita.it
+      <div class="brand-container">
+        <span class="brand-name">Polymita.it</span>
+        <span class="brand-payoff">The inclusion point</span>
+      </div>
       <button class="top-bar-text-button" onclick="scrollToSection('home-section')" id="home-button">
         Home
       </button>
@@ -60,15 +65,15 @@
       <button class="top-bar-text-button" onclick="scrollToSection('projects-section')">
         Progetti
       </button>
-      <button class="top-bar-text-button" onclick="scrollToSection('contact-section')">
-        Contatti
-      </button>
       <button onclick="buttonClicked('https://www.instagram.com/polymita.it?igsh=d3JhcG9yODM1Z3Az&utm_source=qr')"
         class="top-bar-icon-button" id="instagram-button">
         <img src="public/images/instagram.png">
       </button>
       <button onclick="buttonClicked('https://ko-fi.com/polymita')" class="top-bar-icon-button">
         <img src="public/images/heart.png">
+      </button>
+      <button onclick="buttonClicked('mailto:inclusionpoint.it@gmail.com')" class="top-bar-text-button contact-btn">
+        Contact us
       </button>
     </div>
   </div>
@@ -162,6 +167,9 @@
       </section>
     </div>
   </div>
+  <div class="snail-trail"></div>
+  <div class="rainbow-trail"></div>
+  <div class="secret-snail" id="secret-snail"></div>
 </body>
 
 </html>
