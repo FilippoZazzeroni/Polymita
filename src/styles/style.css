@@ -26,13 +26,17 @@ body {
 .website-content {
     text-align: center;
     font-family: "AppFont";
-    font-size: 19px;
-    background-color: rgb(174, 81, 206, 0.25);
+    font-size: clamp(17px, 2.5vw, 19px);
+    background-color: rgba(174, 81, 206, 0.15);
+    line-height: 1.5;
+    letter-spacing: -0.022em;
 }
 
 #contact-section {
     color: white;
-    background-color: rgb(132, 8, 174, 0.7);
+    background-color: rgba(132, 8, 174, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 #contact-section a {
@@ -44,7 +48,9 @@ body {
 }
 
 section {
-    padding: 30px;
+    padding: 48px 20px;
+    margin: 0 auto;
+    max-width: 980px;
 }
 
 section a {
@@ -55,6 +61,10 @@ section a {
 .website-content h1 {
     margin: 0;
     color: rgb(132, 8, 174);
+    font-size: clamp(40px, 5vw, 56px);
+    font-weight: 600;
+    letter-spacing: -0.003em;
+    line-height: 1.1;
 }
 
 .img-wrapper {
@@ -67,9 +77,12 @@ section a {
     z-index: 1000;
     font-family: "AppFont";
     color: white;
-    background-color: rgb(132, 8, 174);
-    padding: 10px;
+    background-color: rgba(132, 8, 174, 0.85);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    padding: 12px 20px;
     max-height: 200px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .top-bar-web {
@@ -104,8 +117,10 @@ section a {
     border: none;
     color: white;
     font-family: "AppFont";
-    font-size: 18px;
-    transition: transform 0.2s ease-in-out;
+    font-size: clamp(15px, 2vw, 17px);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    padding: 8px 16px;
+    border-radius: 980px;
 }
 
 strong {
@@ -114,7 +129,8 @@ strong {
 }
 
 .top-bar-text-button:hover {
-    color: black;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .top-bar-text-button:active {
@@ -151,18 +167,22 @@ strong {
 
 .animated-button {
     font-family: "AppFont";
-    font-size: large;
+    font-size: clamp(15px, 2vw, 17px);
     background-color: rgb(132, 8, 174);
     color: white;
-    padding: 12px;
-    transition: transform 0.2s ease-in-out;
-    border-radius: 16px;
+    padding: clamp(10px, 1.5vw, 12px) clamp(18px, 2.5vw, 22px);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 980px;
     border: none;
-    display: inline-block;
+    display: inline-flex;
     text-decoration: none;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    min-width: clamp(120px, 15vw, 140px);
+    box-shadow: 0 2px 6px rgba(132, 8, 174, 0.2);
 }
 
 .animated-button img {
@@ -172,19 +192,26 @@ strong {
 }
 
 .animated-button:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
+    background-color: rgb(142, 18, 184);
+    box-shadow: 0 4px 12px rgba(132, 8, 174, 0.3);
 }
 
 .menu {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0;
+    transform: translateY(-10px);
 }
 
 /* Open state of the menu (visible) */
 .menu.open {
     max-height: 200px;
-    animation: slideIn 0.2s ease-out;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .menu ul {
@@ -210,7 +237,11 @@ strong {
     }
 
     .website-content {
-        font-size: 5vw;
+        font-size: clamp(15px, 4vw, 17px);
+    }
+
+    .website-content h1 {
+        font-size: clamp(32px, 7vw, 40px);
     }
 
     .menu-button {
@@ -219,34 +250,44 @@ strong {
 
     .menu {
         display: none;
-        /* Hidden by default on mobile */
         position: absolute;
         top: 60px;
         right: 20px;
-        background: blueviolet;
-        border-radius: 10px;
+        background: rgba(132, 8, 174, 0.95);
+        backdrop-filter: saturate(180%) blur(20px);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        border-radius: 14px;
         padding: 10px;
         z-index: 1000;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        animation: slideIn 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     }
 
     .menu ul {
         flex-direction: column;
+        gap: 12px;
     }
 
-    .menu.open {
+    .menu a {
+        font-size: 16px;
+        padding: 8px 16px;
         display: block;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .menu a:hover {
+        background: rgba(255, 255, 255, 0.1);
     }
 }
 
 @keyframes slideIn {
-    from {
-        transform: scaleX(0)scaleY(0);
-        transform-origin: top; /* Scale from the left side */
+    0% {
+        transform: translateY(-20px) scale(0.98);
         opacity: 0;
     }
-    to {
-        transform: scaleX(1)scaleY(1);
-        transform-origin: left;
+    100% {
+        transform: translateY(0) scale(1);
         opacity: 1;
     }
 }
