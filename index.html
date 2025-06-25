@@ -42,7 +42,7 @@
       <nav class="menu" id="main-menu">
         <ul>
           <li><button onclick="scrollToSectionCloseMenu('home-section')" class="top-bar-text-button">Home</a></li>
-          <li><button onclick="scrollToSectionCloseMenu('whoweare-section')" class="top-bar-text-button">Chi siamo</a></li>
+          <li><button onclick="window.location.href='src/pages/whoweare.html'" class="top-bar-text-button">Chi siamo</a></li>
           <li><button onclick="scrollToSectionCloseMenu('projects-section')" class="top-bar-text-button">Temi</a></li>
           <li><button onclick="scrollToSectionCloseMenu('contact-section')" class="top-bar-text-button">Contatti</a></li>
           <li><button onclick="window.location.href='src/pages/blog.html'" class="top-bar-text-button">Blog</a></li>
@@ -55,7 +55,7 @@
       <button class="top-bar-text-button" onclick="scrollToSection('home-section')" id="home-button">
         Home
       </button>
-      <button class="top-bar-text-button" onclick="scrollToSection('whoweare-section')">
+      <button class="top-bar-text-button" onclick="window.location.href='src/pages/whoweare.html'">
         Chi Siamo
       </button>
       <button class="top-bar-text-button" onclick="scrollToSection('projects-section')">
@@ -139,13 +139,6 @@
         </div>
       </section>
 
-      <section id="whoweare-section">
-        <div class="section-content">
-          <h1>Chi siamo</h1>
-          <p>Work in progress ...</p>
-          Vogliamo raccontarti al meglio chi siamo e come è nato il nostro progetto. Per questo stiamo lavorando a questa sezione.
-        </div>
-      </section>
       <section>
         <div class="section-content">
           <h1>#facciamorete</h1>
@@ -159,6 +152,7 @@
 
       <section id="contact-section">
         <div class="section-content">
+          <img src="public/images/logo-white.png" id="contact-logo">
           <h2 style="font-size: 28px; margin-bottom: 20px;">Contatti</h2>
           <p style="font-size: 18px; margin-bottom: 10px;">
             Per maggiori informazioni o per rimanere in contatto, scrivici a:

@@ -36,6 +36,7 @@ body {
 #contact-section {
     color: white;
     background-color: rgb(132, 8, 174, 0.7);
+    text-align: center;
 }
 
 #contact-section a {
@@ -241,7 +242,7 @@ strong {
 }
 
 /* Make images inside .section-content responsive and max 1280px */
-.section-content img {
+.section-image {
     display: block;
     max-width: 100%;
     width: 100%;
@@ -249,6 +250,12 @@ strong {
     margin: 0 auto;
     margin-bottom: 20px;
     box-sizing: border-box;
+}
+
+#contact-logo {
+    width: 30%;
+    margin-top: -20px;
+    margin-bottom: -80px;
 }
 
 @keyframes slideIn {
