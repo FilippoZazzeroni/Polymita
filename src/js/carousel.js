@@ -58,8 +58,8 @@ window.addEventListener("DOMContentLoaded", () => {
     // Handle resizing
     window.addEventListener('resize', updateSlidePosition);
 
-    loadSectionFile("polylandia_section.html", "polylandia-section");
-    loadSectionFile("school_section.html", "school-section");
+    loadSectionFile("src/pages/polylandia_section.html", "polylandia-section");
+    loadSectionFile("src/pages/school_section.html", "school-section");
 })
 
 function loadSectionFile(section, sectionId) {
