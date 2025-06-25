@@ -193,4 +193,20 @@
     .carousel-button {
         opacity: 1.0;
     }
+
+    .slide-image {
+        width: 100%;
+        padding: 35px 0 25px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slide-image img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 300px;
+        display: block;
+    }
 }
